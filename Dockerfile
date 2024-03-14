@@ -27,8 +27,5 @@ COPY --from=builder /root/.m2 /root/.m2
 # Set working directory
 WORKDIR /app
 
-# Copy the entire application
-COPY . .
-
 # Now you can use this image in your pipeline to build other projects
 
