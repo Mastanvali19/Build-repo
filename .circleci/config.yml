@@ -7,8 +7,10 @@ orbs:
 
 jobs:
   build_and_push_image:
-    machine:
-      image: ubuntu-2204:2022.07.1
+    docker:
+      - image: cimg/openjdk:21.0.2-browsers
+    # machine:
+    #   image: ubuntu-2004:202008-01
     parameters:
       account_id:
         default: ${AWS_ACCOUNT_ID}
@@ -25,9 +27,6 @@ jobs:
       auth:
         description: The authentication method used to access your AWS account. Import the aws-cli orb in your config and provide the aws-cli/setup command to authenticate with your preferred method.
         type: steps
-      # Platform:
-      #   description: The authentication method used to access your AWS account. Import the aws-cli orb in your config and provide the aws-cli/setup command to authenticate with your preferred method.
-      #   type: string
       aws_domain:
         default: amazonaws.com
         description: The AWS domain for your region, e.g., in China, the AWS domain is amazonaws.com.cn. The default value is amazonaws.com.
