@@ -7,8 +7,8 @@ cd lib
 # Install additional JAR files to your local Maven repository
 mvn install:install-file -Dfile=memcached-1.0.jar -DgroupId=com.danga.MemCached -DartifactId=memcached -Dversion=1.0 -Dpackaging=jar
 mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier -Dversion=11.1.0.jbossorg-1 -Dpackaging=jar
-mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier-client-common -Dversion=11.1.0.jbossorg-1 -Dpackaging=jar
-mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier-clients -Dversion=11.1.0.jbossorg-1 -Dpackaging=jar
+mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier-client-common -Dversion=11.1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier-clients -Dversion=11.1.0 -Dpackaging=jar
 mvn install:install-file -Dfile=prime-validation-1.5.jar -DgroupId=com.travelex.prime -DartifactId=prime-validation -Dversion=1.5 -Dpackaging=jar -e -X
 mvn install:install-file -Dfile=prime-config-1.1.jar -DgroupId=com.travelex.prime -DartifactId=prime-config -Dversion=1.1 -Dpackaging=jar
 mvn install:install-file -Dfile=sac-1.3.jar -DgroupId=sac -DartifactId=sac -Dversion=1.3 -Dpackaging=jar
