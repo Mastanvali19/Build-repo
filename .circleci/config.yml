@@ -48,7 +48,7 @@ jobs:
         description: Name of an Amazon ECR repository.
         type: string
       tag:
-        default: ${CIRCLE_BUILD_NUM}
+        default: demo:${CIRCLE_BUILD_NUM}
         description: A comma-separated string containing Docker image tags to build and push (default = latest).
         type: string
       workspace_root:
