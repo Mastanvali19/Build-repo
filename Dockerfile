@@ -24,8 +24,13 @@ FROM maven:3.9.6-amazoncorretto-8-al2023
 # Copy the .m2 folder with resolved dependencies from the builder stage
 COPY --from=builder /root/.m2 /root/.m2
 
+# Remove the lib folder and files to reduce image size
+RUN rm -rf /app/lib /app/build.sh
+
 # Set working directory
 WORKDIR /app
 
 # Now you can use this image in your pipeline to build other projects
+
+
 
