@@ -48,7 +48,7 @@ jobs:
         description: Name of an Amazon ECR repository.
         type: string
       tag:
-        default: demo:${CIRCLE_BUILD_NUM}
+        default: foxweb-build 2:${CIRCLE_BUILD_NUM}
         description: A comma-separated string containing Docker image tags to build and push (default = latest).
         type: string
       workspace_root:
@@ -90,7 +90,7 @@ workflows:
           aws_domain: amazonaws.com
           dockerfile: Dockerfile
           repo: demo
-          tag: ${CIRCLE_BUILD_NUM}
+          tag: foxweb-build 2:${CIRCLE_BUILD_NUM}
           workspace_root: workspace
           context: creds
           filters:

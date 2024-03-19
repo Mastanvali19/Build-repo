@@ -2,7 +2,9 @@
 ######################################################################################
 
 # Use a Maven image as the base image
-FROM maven:3.9.6-amazoncorretto-8-al2023 AS builder
+# FROM maven:3.9.6-amazoncorretto-8-al2023 AS builder
+
+FROM  maven:3.9.6-eclipse-temurin-8-alpine  AS builder
 
 # Set working directory
 WORKDIR /app
@@ -19,7 +21,9 @@ RUN chmod +x /app/build.sh
 RUN /app/build.sh
 
 # Use a smaller base image for the final image
-FROM maven:3.9.6-amazoncorretto-8-al2023
+# FROM maven:3.9.6-amazoncorretto-8-al2023
+
+FROM maven:3.9.6-eclipse-temurin-8-alpine
 
 # Copy the .m2 folder with resolved dependencies from the builder stage
 COPY --from=builder /root/.m2 /root/.m2

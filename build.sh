@@ -7,7 +7,7 @@ cd lib
 # Install additional JAR files to your local Maven repository
 mvn install:install-file -Dfile=memcached-1.0.jar -DgroupId=com.danga.MemCached -DartifactId=memcached -Dversion=1.0 -Dpackaging=jar
 mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier -Dversion=11.1.0.jbossorg-1 -Dpackaging=jar
-mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier-client-common -Dversion=11.1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=notifier-client-common-11.1.0.jar -DgroupId=com.travelex.notifier -DartifactId=notifier-client-common -Dversion=11.1.0 -Dpackaging=jar
 mvn install:install-file -Dfile=notifier.jar -DgroupId=com.travelex.notifier -DartifactId=notifier-clients -Dversion=11.1.0 -Dpackaging=jar
 mvn install:install-file -Dfile=prime-validation-1.5.jar -DgroupId=com.travelex.prime -DartifactId=prime-validation -Dversion=1.5 -Dpackaging=jar -e -X
 mvn install:install-file -Dfile=prime-config-1.1.jar -DgroupId=com.travelex.prime -DartifactId=prime-config -Dversion=1.1 -Dpackaging=jar
@@ -29,7 +29,8 @@ mvn install:install-file -Dfile=serializer-2.7.1.jbossorg-1.jar -DgroupId=xalan 
 mvn install:install-file -Dfile=xalan-2.7.1.jbossorg-1.jar -DgroupId=xalan -DartifactId=xalan -Dversion=2.7.1.jbossorg-1 -Dpackaging=jar
 mvn install:install-file -Dfile=serializer-2.7.1.jbossorg-1.jar -DgroupId=xalan -DartifactId=serializer -Dversion=2.7.1.jbossorg-1 -Dpackaging=jar
 mvn install:install-file -Dfile=xercesImpl-2.9.1-jbossas-1.jar -DgroupId=xerces -DartifactId=xercesImpl -Dversion=2.9.1-jbossas-1 -Dpackaging=jar
-mvn install:install-file -Dfile=saaj-impl-1.3.16-jbossorg-1.jar -DgroupId=com.sun.xml.messaging -DartifactId=saaj-impl -Dversion=1.3.16-jbossorg-1 -Dpackaging=jar
+mvn install:install-file -Dfile=cxf-bundle-2.6.1.jar -DgroupId=org.apache.cxf -DartifactId=cxf-bundle -Dversion=2.6.1 -Dpackaging=jar
+mvn install:install-file -Dfile=saaj-impl-1.3.16-jbossorg-1.jar -DgroupId=com.sun.xml.messaging.saaj -DartifactId=saaj-impl -Dversion=1.3.16-jbossorg-1 -Dpackaging=jar
 
 
 
