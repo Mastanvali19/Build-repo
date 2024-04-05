@@ -7,10 +7,10 @@ orbs:
 
 jobs:
   build_and_push_image:
-    # docker:
-    #   - image: cimg/openjdk:21.0.2-browsers
-    machine:
-      image: ubuntu-2204:2023.02.1
+    docker:
+      - image: cimg/openjdk:8.0.402-node
+    # machine:
+    #   image: ubuntu-2204:2023.02.1
     parameters:
       account_id:
         default: ${AWS_ACCOUNT_ID}
