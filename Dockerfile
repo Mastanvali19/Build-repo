@@ -11,7 +11,7 @@ WORKDIR /app
 
 # Copy only the necessary files for dependency resolution
 COPY lib /app/lib
-COPY build.sh /app/build.sh
+COPY  build.sh /app/build.sh
 
 
 # Make sure the build script is executable
@@ -35,6 +35,7 @@ RUN rm -rf /app/lib /app/build.sh
 WORKDIR /app
 
 # Now you can use this image in your pipeline to build other projects
+
 
 
 
