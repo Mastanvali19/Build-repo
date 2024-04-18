@@ -80,11 +80,11 @@ jobs:
           region: << parameters.region >>
           repo: << parameters.repo >>
           tag:  << parameters.tag >>
-      - run:
-          name: Store Image Tag in SSM Parameter
-          command: |
-            # Use AWS CLI to update SSM parameter with the new image tag
-            aws ssm put-parameter --name "/build-repo/image-tag/latest" --value "${CIRCLE_SHA1}" --type "String" --overwrite
+      # - run:
+      #     name: Store Image Tag in SSM Parameter
+      #     command: |
+      #       # Use AWS CLI to update SSM parameter with the new image tag
+      #       aws ssm put-parameter --name "/build-repo/image-tag/latest" --value "${CIRCLE_SHA1}" --type "String" --overwrite
 
 
 workflows:
