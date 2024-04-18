@@ -53,7 +53,7 @@ jobs:
         description: Name of an Amazon ECR repository.
         type: string
       tag:
-        default: .
+        default: latest
         description: A comma-separated string containing Docker image tags to build and push (default = latest).
         type: string
       workspace_root:
