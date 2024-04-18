@@ -7,8 +7,6 @@ orbs:
 
 jobs:
   build_and_push_image:
-    # docker:
-    #   - image: cimg/openjdk:8.0.402-browsers
     machine:
       image: ubuntu-2204:2023.02.1
     parameters:
@@ -31,14 +29,9 @@ jobs:
         default: amazonaws.com
         description: The AWS domain for your region, e.g., in China, the AWS domain is amazonaws.com.cn. The default value is amazonaws.com.
         type: string
-      # dockerfile:
-      #   default: .
-      #   description: Name of the Dockerfile to use. Defaults to Dockerfile.
-      #   type: string
-      path:
-        default: .
-        description: Path to the directory containing your Dockerfile and build context.
-                     Defaults to . (working directory).
+      dockerfile:
+        default: Dockerfile
+        description: Name of the Dockerfile to use. Defaults to Dockerfile.
         type: string
       push_image:
         default: false
@@ -70,7 +63,7 @@ jobs:
           attach_workspace: << parameters.attach_workspace >>
           auth: << parameters.auth >>
           aws_domain: << parameters.aws_domain >>
-          path: << parameters.path >>
+          dockerfile: << parameters.dockerfile >>
           push_image: << parameters.push_image >>
           repo: << parameters.repo >>
           tag: << parameters.tag >>
@@ -80,11 +73,6 @@ jobs:
           region: << parameters.region >>
           repo: << parameters.repo >>
           tag:  << parameters.tag >>
-      # - run:
-      #     name: Store Image Tag in SSM Parameter
-      #     command: |
-      #       # Use AWS CLI to update SSM parameter with the new image tag
-      #       aws ssm put-parameter --name "/build-repo/image-tag/latest" --value "${CIRCLE_SHA1}" --type "String" --overwrite
 
 
 workflows:
@@ -97,9 +85,11 @@ workflows:
                  version: latest   
                  role_arn: arn:aws:iam::872238057757:role/Circleci  
           account_id: ${AWS_ACCOUNT_ID}
-          path: Dockerfile
-          attach_workspace: true
+          attach_workspace: false
           aws_domain: amazonaws.com
+          dockerfile: Dockerfile
+          repo: build-repo
+          tag: latest
           context: creds
           filters:
             branches:
