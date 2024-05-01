@@ -1,0 +1,57 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 2.25kB 0.4s done
+#1 DONE 0.8s
+
+#2 [internal] load metadata for docker.io/library/maven:3.9.6-amazoncorretto-8
+#2 ...
+
+#3 [auth] library/maven:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/maven:3.9.6-amazoncorretto-8
+#2 DONE 11.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 0.1s
+#4 transferring context: 2B 0.1s done
+#4 DONE 0.2s
+
+#5 [builder 1/6] FROM docker.io/library/maven:3.9.6-amazoncorretto-8@sha256:22a8bf4ff785b6cb45119d8a50d6ffbd583441e5de7608e4924f36e81141c8d6
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 1.20kB 0.3s done
+#6 DONE 0.5s
+
+#7 [builder 4/6] COPY  build.sh /app/build.sh
+#7 CACHED
+
+#8 [builder 6/6] RUN /app/build.sh
+#8 CACHED
+
+#9 [builder 3/6] COPY lib /app/lib
+#9 CACHED
+
+#10 [stage-1 3/4] RUN rm -rf /app/lib /app/build.sh
+#10 CACHED
+
+#11 [builder 5/6] RUN chmod +x /app/build.sh
+#11 CACHED
+
+#12 [stage-1 2/4] COPY --from=builder /root/.m2 /root/.m2
+#12 CACHED
+
+#13 [builder 2/6] WORKDIR /app
+#13 CACHED
+
+#14 [stage-1 4/4] WORKDIR /app
+#14 CACHED
+
+#15 exporting to image
+#15 exporting layers done
+#15 writing image sha256:e1c12aa172c62d54c5627a56cba8952576f980d21983b394552b2fc47647ba6b 0.0s done
+#15 naming to docker.io/library/corretto 0.1s done
+#15 DONE 0.1s

@@ -1,0 +1,741 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 2.17kB 0.2s done
+#1 DONE 0.4s
+
+#2 [internal] load metadata for docker.io/library/maven:3.9.6-eclipse-temurin-8-alpine
+#2 DONE 5.8s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [builder 1/6] FROM docker.io/library/maven:3.9.6-eclipse-temurin-8-alpine@sha256:afe299920069f13e349f462e25b7f4fde87ae3a8f1afc918e7364c824262d2c8
+#5 resolve docker.io/library/maven:3.9.6-eclipse-temurin-8-alpine@sha256:afe299920069f13e349f462e25b7f4fde87ae3a8f1afc918e7364c824262d2c8 0.1s done
+#5 sha256:3bd01e11f77f29aa29a014caa3b3ff9f1340c11be255e134a5f6967cb1234e58 5.45kB / 5.45kB done
+#5 sha256:afe299920069f13e349f462e25b7f4fde87ae3a8f1afc918e7364c824262d2c8 320B / 320B done
+#5 sha256:43be4d758bdb2fa0301a7fefb323ba9af179d95feb421ed8bf4fbca95a189506 2.41kB / 2.41kB done
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 0B / 8.54MB 0.1s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 0B / 101.52MB 0.1s
+#5 sha256:e22a846daf1a23fd92d6d59d3dba57bda463e910cd200bb9914603682a117fd8 0B / 174B 0.2s
+#5 ...
+
+#4 [internal] load build context
+#4 transferring context: 1.20kB 0.5s done
+#4 DONE 0.7s
+
+#5 [builder 1/6] FROM docker.io/library/maven:3.9.6-eclipse-temurin-8-alpine@sha256:afe299920069f13e349f462e25b7f4fde87ae3a8f1afc918e7364c824262d2c8
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 1.05MB / 8.54MB 2.1s
+#5 sha256:e22a846daf1a23fd92d6d59d3dba57bda463e910cd200bb9914603682a117fd8 174B / 174B 2.6s
+#5 sha256:e22a846daf1a23fd92d6d59d3dba57bda463e910cd200bb9914603682a117fd8 174B / 174B 2.7s done
+#5 sha256:3546951364d504cdce98ebf79d8e5f55edd67fe2ac6b83e4c6e13afbfed84ba0 0B / 716B 2.8s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 2.10MB / 8.54MB 3.4s
+#5 sha256:3546951364d504cdce98ebf79d8e5f55edd67fe2ac6b83e4c6e13afbfed84ba0 716B / 716B 4.4s done
+#5 sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8 0B / 2.63MB 4.6s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 1.05MB / 101.52MB 5.3s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 3.15MB / 8.54MB 5.5s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 4.19MB / 8.54MB 7.7s
+#5 sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8 0B / 2.63MB 9.7s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 3.15MB / 101.52MB 10.3s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 5.24MB / 8.54MB 10.9s
+#5 sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8 1.05MB / 2.63MB 11.7s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 6.29MB / 8.54MB 12.3s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 7.34MB / 8.54MB 14.3s
+#5 sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8 2.10MB / 2.63MB 14.8s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 5.24MB / 101.52MB 15.4s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 8.54MB / 8.54MB 16.0s
+#5 sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 8.54MB / 8.54MB 16.0s done
+#5 extracting sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 0B / 9.48MB 16.3s
+#5 sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8 2.63MB / 2.63MB 16.5s
+#5 sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8 2.63MB / 2.63MB 16.5s done
+#5 sha256:b74b3babcafa84cc481ffb26a62d0df30e06aeab66f60dd4c966abc7401d533e 0B / 857B 16.9s
+#5 extracting sha256:a21a63612cbe8d148f75173be90696fbe03e2a6e9c901e2c039bcf1bcdeec0b9 1.9s done
+#5 sha256:b74b3babcafa84cc481ffb26a62d0df30e06aeab66f60dd4c966abc7401d533e 857B / 857B 18.4s done
+#5 sha256:157b1f8ece23f8357a41203f258b624161e53075274146b5236084460c5120f0 0B / 356B 18.7s
+#5 sha256:157b1f8ece23f8357a41203f258b624161e53075274146b5236084460c5120f0 356B / 356B 19.6s done
+#5 ...
+
+#6 [auth] library/maven:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [builder 1/6] FROM docker.io/library/maven:3.9.6-eclipse-temurin-8-alpine@sha256:afe299920069f13e349f462e25b7f4fde87ae3a8f1afc918e7364c824262d2c8
+#5 sha256:f09d84dc33bc7f4b5c4ad5c944c92eec0916b280de1795aba1cc34bfda544fd8 0B / 164B 19.9s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 9.44MB / 101.52MB 20.6s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 1.05MB / 9.48MB 20.6s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 2.10MB / 9.48MB 23.2s
+#5 sha256:f09d84dc33bc7f4b5c4ad5c944c92eec0916b280de1795aba1cc34bfda544fd8 0B / 164B 25.0s
+#5 sha256:f09d84dc33bc7f4b5c4ad5c944c92eec0916b280de1795aba1cc34bfda544fd8 164B / 164B 25.1s done
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 13.63MB / 101.52MB 25.7s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 3.15MB / 9.48MB 26.3s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 4.19MB / 9.48MB 28.7s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 16.78MB / 101.52MB 30.8s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 5.24MB / 9.48MB 30.8s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 6.29MB / 9.48MB 32.9s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 7.34MB / 9.48MB 34.8s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 19.92MB / 101.52MB 35.8s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 8.39MB / 9.48MB 37.0s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 9.44MB / 9.48MB 38.9s
+#5 sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 9.48MB / 9.48MB 39.0s done
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 23.07MB / 101.52MB 40.8s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 28.31MB / 101.52MB 44.6s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 33.55MB / 101.52MB 49.0s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 38.80MB / 101.52MB 53.9s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 44.04MB / 101.52MB 58.4s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 48.23MB / 101.52MB 63.4s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 53.48MB / 101.52MB 67.4s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 57.67MB / 101.52MB 72.5s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 62.91MB / 101.52MB 76.4s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 68.16MB / 101.52MB 81.0s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 73.40MB / 101.52MB 85.8s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 78.64MB / 101.52MB 90.5s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 83.89MB / 101.52MB 95.0s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 89.13MB / 101.52MB 99.7s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 94.37MB / 101.52MB 104.5s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 99.61MB / 101.52MB 109.3s
+#5 sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 101.52MB / 101.52MB 111.5s done
+#5 extracting sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb
+#5 extracting sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 5.1s
+#5 extracting sha256:b55c1055a2ad6292da34c7007392014a7a5a8939d32d297c43fa65f0faaec5bb 6.1s done
+#5 extracting sha256:e22a846daf1a23fd92d6d59d3dba57bda463e910cd200bb9914603682a117fd8
+#5 extracting sha256:e22a846daf1a23fd92d6d59d3dba57bda463e910cd200bb9914603682a117fd8 done
+#5 extracting sha256:3546951364d504cdce98ebf79d8e5f55edd67fe2ac6b83e4c6e13afbfed84ba0
+#5 extracting sha256:3546951364d504cdce98ebf79d8e5f55edd67fe2ac6b83e4c6e13afbfed84ba0 done
+#5 extracting sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8
+#5 extracting sha256:99fd209f7879eadf411e5ddc9150a2b39c0589fd7796851d42b23d4d78e60cf8 0.3s done
+#5 extracting sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c
+#5 extracting sha256:1af9525da1d6925480ec11a71966229b4034fd28c93442c511f333297f9a967c 0.6s done
+#5 extracting sha256:b74b3babcafa84cc481ffb26a62d0df30e06aeab66f60dd4c966abc7401d533e
+#5 extracting sha256:b74b3babcafa84cc481ffb26a62d0df30e06aeab66f60dd4c966abc7401d533e done
+#5 extracting sha256:157b1f8ece23f8357a41203f258b624161e53075274146b5236084460c5120f0
+#5 extracting sha256:157b1f8ece23f8357a41203f258b624161e53075274146b5236084460c5120f0 done
+#5 extracting sha256:f09d84dc33bc7f4b5c4ad5c944c92eec0916b280de1795aba1cc34bfda544fd8
+#5 extracting sha256:f09d84dc33bc7f4b5c4ad5c944c92eec0916b280de1795aba1cc34bfda544fd8 done
+#5 DONE 126.1s
+
+#7 [builder 2/6] WORKDIR /app
+#7 DONE 2.3s
+
+#8 [builder 3/6] COPY lib /app/lib
+#8 DONE 1.1s
+
+#9 [builder 4/6] COPY  build.sh /app/build.sh
+#9 DONE 0.5s
+
+#10 [builder 5/6] RUN chmod +x /app/build.sh
+#10 DONE 0.9s
+
+#11 [builder 6/6] RUN /app/build.sh
+#11 7.462 [INFO] Scanning for projects...
+#11 9.518 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom
+#11 11.81 Progress (1): 1.4/5.3 kBProgress (1): 2.7/5.3 kBProgress (1): 4.1/5.3 kBProgress (1): 5.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom (5.3 kB at 2.2 kB/s)
+#11 11.99 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom
+#11 12.14 Progress (1): 1.4/9.9 kBProgress (1): 2.7/9.9 kBProgress (1): 4.1/9.9 kBProgress (1): 5.5/9.9 kBProgress (1): 6.9/9.9 kBProgress (1): 8.2/9.9 kBProgress (1): 9.6/9.9 kBProgress (1): 9.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom (9.9 kB at 46 kB/s)
+#11 12.24 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom
+#11 12.35 Progress (1): 1.4/45 kBProgress (1): 2.7/45 kBProgress (1): 4.1/45 kBProgress (1): 5.5/45 kBProgress (1): 6.9/45 kBProgress (1): 8.2/45 kBProgress (1): 9.6/45 kBProgress (1): 11/45 kB Progress (1): 12/45 kBProgress (1): 14/45 kBProgress (1): 15/45 kBProgress (1): 16/45 kBProgress (1): 18/45 kBProgress (1): 19/45 kBProgress (1): 21/45 kBProgress (1): 22/45 kBProgress (1): 23/45 kBProgress (1): 25/45 kBProgress (1): 26/45 kBProgress (1): 27/45 kBProgress (1): 29/45 kBProgress (1): 30/45 kBProgress (1): 32/45 kBProgress (1): 33/45 kBProgress (1): 34/45 kBProgress (1): 36/45 kBProgress (1): 37/45 kBProgress (1): 38/45 kBProgress (1): 40/45 kBProgress (1): 41/45 kBProgress (1): 43/45 kBProgress (1): 44/45 kBProgress (1): 45/45 kBProgress (1): 45 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom (45 kB at 183 kB/s)
+#11 12.56 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom
+#11 12.67 Progress (1): 16/21 kBProgress (1): 21 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom (21 kB at 158 kB/s)
+#11 12.84 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar
+#11 12.96 Progress (1): 16/36 kBProgress (1): 33/36 kBProgress (1): 36 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar (36 kB at 232 kB/s)
+#11 13.06 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.pom
+#11 13.15 Progress (1): 7.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.pom (7.8 kB at 77 kB/s)
+#11 13.20 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+#11 13.30 Progress (1): 8.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 76 kB/s)
+#11 13.31 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+#11 13.43 Progress (1): 16/48 kBProgress (1): 33/48 kBProgress (1): 48 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 324 kB/s)
+#11 13.52 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+#11 13.65 Progress (1): 16/21 kBProgress (1): 21 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 150 kB/s)
+#11 13.69 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.jar
+#11 13.81 Progress (1): 7.6/31 kBProgress (1): 15/31 kB Progress (1): 31 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.jar (31 kB at 208 kB/s)
+#11 13.90 [INFO] 
+#11 13.90 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 13.90 [INFO] Building Maven Stub Project (No POM) 1
+#11 13.90 [INFO] --------------------------------[ pom ]---------------------------------
+#11 13.95 [INFO] 
+#11 13.95 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 14.05 Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom
+#11 14.26 Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom (2.2 kB at 10 kB/s)
+#11 14.28 Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom
+#11 14.64 Progress (1): 16/30 kBProgress (1): 30 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom (30 kB at 81 kB/s)
+#11 14.71 Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom
+#11 14.85 Progress (1): 1.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom (1.9 kB at 13 kB/s)
+#11 14.87 Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom
+#11 14.98 Progress (1): 8.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom (8.0 kB at 73 kB/s)
+#11 15.01 Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom
+#11 15.15 Progress (1): 16/25 kBProgress (1): 25 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom (25 kB at 148 kB/s)
+#11 15.26 Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar
+#11 15.42 Progress (1): 16/146 kBProgress (1): 33/146 kBProgress (1): 49/146 kBProgress (1): 66/146 kBProgress (1): 82/146 kBProgress (1): 98/146 kBProgress (1): 115/146 kBProgress (1): 131/146 kBProgress (1): 146 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar (146 kB at 433 kB/s)
+#11 15.60 Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.jar
+#11 15.62 Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar
+#11 15.84 Progress (1): 16/136 kBProgress (1): 33/136 kBProgress (1): 49/136 kBProgress (1): 66/136 kBProgress (1): 82/136 kBProgress (1): 98/136 kBProgress (1): 115/136 kBProgress (1): 131/136 kBProgress (1): 136 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.jar (136 kB at 314 kB/s)
+#11 16.41 Progress (1): 1.4/267 kBProgress (1): 2.7/267 kBProgress (1): 4.1/267 kBProgress (1): 5.5/267 kBProgress (1): 6.9/267 kBProgress (1): 8.2/267 kBProgress (1): 9.6/267 kBProgress (1): 11/267 kB Progress (1): 12/267 kBProgress (1): 14/267 kBProgress (1): 15/267 kBProgress (1): 16/267 kBProgress (1): 32/267 kBProgress (1): 49/267 kBProgress (1): 65/267 kBProgress (1): 81/267 kBProgress (1): 98/267 kBProgress (1): 114/267 kBProgress (1): 131/267 kBProgress (1): 147/267 kBProgress (1): 163/267 kBProgress (1): 180/267 kBProgress (1): 196/267 kBProgress (1): 212/267 kBProgress (1): 229/267 kBProgress (1): 245/267 kBProgress (1): 262/267 kBProgress (1): 267 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar (267 kB at 228 kB/s)
+#11 17.02 [INFO] pom.xml not found in memcached-1.0.jar
+#11 17.06 [INFO] Installing /app/lib/memcached-1.0.jar to /root/.m2/repository/com/danga/MemCached/memcached/1.0/memcached-1.0.jar
+#11 17.07 [INFO] Installing /tmp/mvninstall8468451364709081007.pom to /root/.m2/repository/com/danga/MemCached/memcached/1.0/memcached-1.0.pom
+#11 17.10 [INFO] ------------------------------------------------------------------------
+#11 17.10 [INFO] BUILD SUCCESS
+#11 17.10 [INFO] ------------------------------------------------------------------------
+#11 17.11 [INFO] Total time:  9.798 s
+#11 17.11 [INFO] Finished at: 2024-04-30T10:47:18Z
+#11 17.11 [INFO] ------------------------------------------------------------------------
+#11 24.10 [INFO] Scanning for projects...
+#11 24.94 [INFO] 
+#11 24.94 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 24.94 [INFO] Building Maven Stub Project (No POM) 1
+#11 24.94 [INFO] --------------------------------[ pom ]---------------------------------
+#11 24.97 [INFO] 
+#11 24.98 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 25.55 [INFO] Installing /app/lib/notifier.jar to /root/.m2/repository/com/travelex/notifier/notifier/11.1.0.jbossorg-1/notifier-11.1.0.jbossorg-1.jar
+#11 25.75 [INFO] Installing /tmp/mvninstall3855304591808402749.pom to /root/.m2/repository/com/travelex/notifier/notifier/11.1.0.jbossorg-1/notifier-11.1.0.jbossorg-1.pom
+#11 25.79 [INFO] ------------------------------------------------------------------------
+#11 25.80 [INFO] BUILD SUCCESS
+#11 25.80 [INFO] ------------------------------------------------------------------------
+#11 25.80 [INFO] Total time:  1.861 s
+#11 25.80 [INFO] Finished at: 2024-04-30T10:47:27Z
+#11 25.80 [INFO] ------------------------------------------------------------------------
+#11 32.76 [INFO] Scanning for projects...
+#11 33.63 [INFO] 
+#11 33.63 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 33.63 [INFO] Building Maven Stub Project (No POM) 1
+#11 33.63 [INFO] --------------------------------[ pom ]---------------------------------
+#11 33.68 [INFO] 
+#11 33.68 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 34.23 [INFO] Installing /app/lib/notifier-client-common-11.1.0.jar to /root/.m2/repository/com/travelex/notifier/notifier-client-common/11.1.0/notifier-client-common-11.1.0.jar
+#11 34.27 [INFO] Installing /tmp/notifier-client-common-11.1.04852357595848819043.pom to /root/.m2/repository/com/travelex/notifier/notifier-client-common/11.1.0/notifier-client-common-11.1.0.pom
+#11 34.30 [INFO] ------------------------------------------------------------------------
+#11 34.30 [INFO] BUILD SUCCESS
+#11 34.30 [INFO] ------------------------------------------------------------------------
+#11 34.32 [INFO] Total time:  1.737 s
+#11 34.32 [INFO] Finished at: 2024-04-30T10:47:36Z
+#11 34.32 [INFO] ------------------------------------------------------------------------
+#11 41.77 [INFO] Scanning for projects...
+#11 42.57 [INFO] 
+#11 42.57 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 42.57 [INFO] Building Maven Stub Project (No POM) 1
+#11 42.57 [INFO] --------------------------------[ pom ]---------------------------------
+#11 42.62 [INFO] 
+#11 42.62 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 43.26 [INFO] Installing /app/lib/notifier.jar to /root/.m2/repository/com/travelex/notifier/notifier-clients/11.1.0/notifier-clients-11.1.0.jar
+#11 43.56 [INFO] Installing /tmp/mvninstall5728849805727670173.pom to /root/.m2/repository/com/travelex/notifier/notifier-clients/11.1.0/notifier-clients-11.1.0.pom
+#11 43.59 [INFO] ------------------------------------------------------------------------
+#11 43.59 [INFO] BUILD SUCCESS
+#11 43.59 [INFO] ------------------------------------------------------------------------
+#11 43.60 [INFO] Total time:  1.975 s
+#11 43.60 [INFO] Finished at: 2024-04-30T10:47:45Z
+#11 43.60 [INFO] ------------------------------------------------------------------------
+#11 45.41 Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+#11 45.41 Maven home: /usr/share/maven
+#11 45.41 Java version: 1.8.0_412, vendor: Temurin, runtime: /opt/java/openjdk/jre
+#11 45.41 Default locale: en_US, platform encoding: UTF-8
+#11 45.41 OS name: "linux", version: "5.15.133.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+#11 51.13 [DEBUG] Created new class realm maven.api
+#11 51.13 [DEBUG] Importing foreign packages into class realm maven.api
+#11 51.13 [DEBUG]   Imported: javax.annotation.* < plexus.core
+#11 51.14 [DEBUG]   Imported: javax.annotation.security.* < plexus.core
+#11 51.14 [DEBUG]   Imported: javax.inject.* < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.* < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.cli < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.exception < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.execution < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.graph < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.model < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.project < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.repository < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.settings < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.usability < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+#11 51.14 [DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+#11 51.14 [DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+#11 51.14 [DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+#11 51.14 [DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+#11 51.14 [DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+#11 51.14 [DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+#11 51.14 [DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+#11 51.14 [DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+#11 51.16 [DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+#11 51.16 [DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+#11 51.16 [DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+#11 51.16 [DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+#11 51.16 [DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+#11 51.16 [DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+#11 51.16 [DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.util < plexus.core
+#11 51.16 [DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+#11 51.16 [DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+#11 51.16 [DEBUG]   Imported: org.slf4j.* < plexus.core
+#11 51.16 [DEBUG]   Imported: org.slf4j.event.* < plexus.core
+#11 51.16 [DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+#11 51.16 [DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+#11 51.16 [DEBUG] Populating class realm maven.api
+#11 51.32 [DEBUG] Created adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+#11 51.59 [INFO] Error stacktraces are turned on.
+#11 51.59 [DEBUG] Message scheme: color
+#11 51.59 [DEBUG] Message styles: debug info warning error success failure strong mojo project
+#11 51.59 [DEBUG] Reading global settings from /usr/share/maven/conf/settings.xml
+#11 51.59 [DEBUG] Reading user settings from /root/.m2/settings.xml
+#11 51.67 [DEBUG] Reading global toolchains from /usr/share/maven/conf/toolchains.xml
+#11 51.67 [DEBUG] Reading user toolchains from /root/.m2/toolchains.xml
+#11 51.73 [DEBUG] Using local repository at /root/.m2/repository
+#11 51.88 [DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /root/.m2/repository
+#11 51.90 [INFO] Scanning for projects...
+#11 52.09 [DEBUG] Extension realms for project org.apache.maven:standalone-pom:pom:1: (none)
+#11 52.09 [DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+#11 52.22 [DEBUG] Resolving plugin prefix install from [org.apache.maven.plugins, org.codehaus.mojo]
+#11 52.25 [DEBUG] Creating adapter using nameMapper 'gav' and factory 'rwlock-local'
+#11 52.69 [DEBUG] Resolved plugin prefix install to org.apache.maven.plugins:maven-install-plugin from POM org.apache.maven:standalone-pom:pom:1
+#11 52.69 [DEBUG] === REACTOR BUILD PLAN ================================================
+#11 52.69 [DEBUG] Project: org.apache.maven:standalone-pom:pom:1
+#11 52.69 [DEBUG] Tasks:   [install:install-file]
+#11 52.69 [DEBUG] Style:   Aggregating
+#11 52.69 [DEBUG] =======================================================================
+#11 52.75 [INFO] 
+#11 52.75 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 52.75 [INFO] Building Maven Stub Project (No POM) 1
+#11 52.75 [INFO] --------------------------------[ pom ]---------------------------------
+#11 52.75 [DEBUG] Resolving plugin prefix install from [org.apache.maven.plugins, org.codehaus.mojo]
+#11 52.75 [DEBUG] Resolved plugin prefix install to org.apache.maven.plugins:maven-install-plugin from POM org.apache.maven:standalone-pom:pom:1
+#11 52.75 [DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+#11 52.75 [DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+#11 52.75 [DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+#11 52.75 [DEBUG] === PROJECT BUILD PLAN ================================================
+#11 52.76 [DEBUG] Project:       org.apache.maven:standalone-pom:1
+#11 52.76 [DEBUG] Dependencies (collect): []
+#11 52.76 [DEBUG] Dependencies (resolve): []
+#11 52.76 [DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+#11 52.77 [DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+#11 52.77 [DEBUG] -----------------------------------------------------------------------
+#11 52.77 [DEBUG] Goal:          org.apache.maven.plugins:maven-install-plugin:3.1.1:install-file (default-cli)
+#11 52.77 [DEBUG] Style:         Aggregating
+#11 52.77 [DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+#11 52.77 <configuration>
+#11 52.77   <artifactId>${artifactId}</artifactId>
+#11 52.77   <classifier>${classifier}</classifier>
+#11 52.77   <file>${file}</file>
+#11 52.77   <generatePom>${generatePom}</generatePom>
+#11 52.77   <groupId>${groupId}</groupId>
+#11 52.77   <javadoc>${javadoc}</javadoc>
+#11 52.77   <localRepositoryPath>${localRepositoryPath}</localRepositoryPath>
+#11 52.77   <packaging>${packaging}</packaging>
+#11 52.77   <pomFile>${pomFile}</pomFile>
+#11 52.77   <session default-value="${session}"/>
+#11 52.77   <sources>${sources}</sources>
+#11 52.77   <version>${version}</version>
+#11 52.77 </configuration>
+#11 52.77 [DEBUG] =======================================================================
+#11 52.78 [INFO] 
+#11 52.78 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 53.04 [DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=2382336, ConflictMarker.markTime=622318, ConflictMarker.nodeCount=4, ConflictIdSorter.graphTime=15216650, ConflictIdSorter.topsortTime=571149, ConflictIdSorter.conflictIdCount=4, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=13519093, ConflictResolver.conflictItemCount=4, DfDependencyCollector.collectTime=160702957, DfDependencyCollector.transformTime=65515844}
+#11 53.04 [DEBUG] org.apache.maven.plugins:maven-install-plugin:jar:3.1.1
+#11 53.04 [DEBUG]    org.eclipse.aether:aether-util:jar:1.0.0.v20140518:compile
+#11 53.04 [DEBUG]       org.eclipse.aether:aether-api:jar:1.0.0.v20140518:compile
+#11 53.04 [DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.5.0:compile
+#11 53.07 [DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-install-plugin:3.1.1
+#11 53.07 [DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-install-plugin:3.1.1
+#11 53.07 [DEBUG]   Imported:  < maven.api
+#11 53.07 [DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-install-plugin:3.1.1
+#11 53.07 [DEBUG]   Included: org.apache.maven.plugins:maven-install-plugin:jar:3.1.1
+#11 53.09 [DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.5.0
+#11 53.31 [DEBUG] Loading mojo org.apache.maven.plugins:maven-install-plugin:3.1.1:install-file from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-install-plugin:3.1.1, parent: sun.misc.Launcher$AppClassLoader@7852e922]
+#11 53.42 [DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-install-plugin:3.1.1:install-file:default-cli' with basic configurator -->
+#11 53.42 [DEBUG]   (f) artifactId = prime-validation
+#11 53.43 [DEBUG]   (f) file = /app/lib/prime-validation-1.5.jar
+#11 53.44 [DEBUG]   (f) groupId = com.travelex.prime
+#11 53.44 [DEBUG]   (f) packaging = jar
+#11 53.46 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@17d238b1
+#11 53.46 [DEBUG]   (f) version = 1.5
+#11 53.46 [DEBUG] -- end configuration --
+#11 53.47 [DEBUG] Loading META-INF/maven/com.travelex.prime/prime-validation/pom.xml
+#11 53.51 [DEBUG] Using JAR embedded POM as pomFile
+#11 53.54 [INFO] Installing /app/lib/prime-validation-1.5.jar to /root/.m2/repository/com/travelex/prime/prime-validation/1.5/prime-validation-1.5.jar
+#11 53.57 [DEBUG] Writing tracking file '/root/.m2/repository/com/travelex/prime/prime-validation/1.5/_remote.repositories'
+#11 53.60 [INFO] Installing /tmp/prime-validation-1.58970742501999219749.pom to /root/.m2/repository/com/travelex/prime/prime-validation/1.5/prime-validation-1.5.pom
+#11 53.60 [DEBUG] Writing tracking file '/root/.m2/repository/com/travelex/prime/prime-validation/1.5/_remote.repositories'
+#11 53.62 [DEBUG] Installing com.travelex.prime:prime-validation/maven-metadata.xml to /root/.m2/repository/com/travelex/prime/prime-validation/maven-metadata-local.xml
+#11 53.64 [INFO] ------------------------------------------------------------------------
+#11 53.64 [INFO] BUILD SUCCESS
+#11 53.64 [INFO] ------------------------------------------------------------------------
+#11 53.65 [INFO] Total time:  1.904 s
+#11 53.65 [INFO] Finished at: 2024-04-30T10:47:55Z
+#11 53.65 [INFO] ------------------------------------------------------------------------
+#11 53.65 [DEBUG] Shutting down adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+#11 53.65 [DEBUG] Shutting down 'file-lock' factory
+#11 53.66 [DEBUG] Shutting down 'rwlock-local' factory
+#11 53.66 [DEBUG] Shutting down 'semaphore-local' factory
+#11 53.66 [DEBUG] Shutting down 'noop' factory
+#11 61.11 [INFO] Scanning for projects...
+#11 61.87 [INFO] 
+#11 61.88 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 61.88 [INFO] Building Maven Stub Project (No POM) 1
+#11 61.88 [INFO] --------------------------------[ pom ]---------------------------------
+#11 61.92 [INFO] 
+#11 61.92 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 62.49 [INFO] Installing /app/lib/prime-config-1.1.jar to /root/.m2/repository/com/travelex/prime/prime-config/1.1/prime-config-1.1.jar
+#11 62.55 [INFO] Installing /tmp/prime-config-1.1113537580224311241.pom to /root/.m2/repository/com/travelex/prime/prime-config/1.1/prime-config-1.1.pom
+#11 62.57 [INFO] ------------------------------------------------------------------------
+#11 62.57 [INFO] BUILD SUCCESS
+#11 62.57 [INFO] ------------------------------------------------------------------------
+#11 62.59 [INFO] Total time:  1.610 s
+#11 62.59 [INFO] Finished at: 2024-04-30T10:48:04Z
+#11 62.59 [INFO] ------------------------------------------------------------------------
+#11 70.98 [INFO] Scanning for projects...
+#11 71.97 [INFO] 
+#11 71.98 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 71.98 [INFO] Building Maven Stub Project (No POM) 1
+#11 71.98 [INFO] --------------------------------[ pom ]---------------------------------
+#11 72.01 [INFO] 
+#11 72.01 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 72.72 [INFO] pom.xml not found in sac-1.3.jar
+#11 72.80 [INFO] Installing /app/lib/sac-1.3.jar to /root/.m2/repository/sac/sac/1.3/sac-1.3.jar
+#11 72.85 [INFO] Installing /tmp/mvninstall757947158852540195.pom to /root/.m2/repository/sac/sac/1.3/sac-1.3.pom
+#11 72.88 [INFO] ------------------------------------------------------------------------
+#11 72.89 [INFO] BUILD SUCCESS
+#11 72.89 [INFO] ------------------------------------------------------------------------
+#11 72.90 [INFO] Total time:  2.088 s
+#11 72.91 [INFO] Finished at: 2024-04-30T10:48:14Z
+#11 72.91 [INFO] ------------------------------------------------------------------------
+#11 80.49 [INFO] Scanning for projects...
+#11 81.51 [INFO] 
+#11 81.51 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 81.51 [INFO] Building Maven Stub Project (No POM) 1
+#11 81.51 [INFO] --------------------------------[ pom ]---------------------------------
+#11 81.56 [INFO] 
+#11 81.56 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 82.23 [INFO] Installing /app/lib/wire-bank-client-1.0.1.jar to /root/.m2/repository/com/travelex/wire/wire-bank-client/1.0.1/wire-bank-client-1.0.1.jar
+#11 82.30 [INFO] Installing /tmp/wire-bank-client-1.0.12792306666676968652.pom to /root/.m2/repository/com/travelex/wire/wire-bank-client/1.0.1/wire-bank-client-1.0.1.pom
+#11 82.35 [INFO] ------------------------------------------------------------------------
+#11 82.35 [INFO] BUILD SUCCESS
+#11 82.35 [INFO] ------------------------------------------------------------------------
+#11 82.37 [INFO] Total time:  2.055 s
+#11 82.37 [INFO] Finished at: 2024-04-30T10:48:24Z
+#11 82.37 [INFO] ------------------------------------------------------------------------
+#11 90.63 [INFO] Scanning for projects...
+#11 91.50 [INFO] 
+#11 91.50 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 91.50 [INFO] Building Maven Stub Project (No POM) 1
+#11 91.50 [INFO] --------------------------------[ pom ]---------------------------------
+#11 91.53 [INFO] 
+#11 91.53 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 92.33 [INFO] Installing /app/lib/wire-rate-client-1.0.1.jar to /root/.m2/repository/com/travelex/wire/wire-rate-client/1.0.1/wire-rate-client-1.0.1.jar
+#11 92.39 [INFO] Installing /tmp/wire-rate-client-1.0.16074498937911323104.pom to /root/.m2/repository/com/travelex/wire/wire-rate-client/1.0.1/wire-rate-client-1.0.1.pom
+#11 92.46 [INFO] ------------------------------------------------------------------------
+#11 92.46 [INFO] BUILD SUCCESS
+#11 92.46 [INFO] ------------------------------------------------------------------------
+#11 92.46 [INFO] Total time:  1.961 s
+#11 92.46 [INFO] Finished at: 2024-04-30T10:48:34Z
+#11 92.46 [INFO] ------------------------------------------------------------------------
+#11 100.9 [INFO] Scanning for projects...
+#11 101.7 [INFO] 
+#11 101.7 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 101.7 [INFO] Building Maven Stub Project (No POM) 1
+#11 101.7 [INFO] --------------------------------[ pom ]---------------------------------
+#11 101.8 [INFO] 
+#11 101.8 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 102.5 [INFO] Installing /app/lib/wire-corridor-client-1.0.1.jar to /root/.m2/repository/com/travelex/wire/wire-corridor-client/1.0.1/wire-corridor-client-1.0.1.jar
+#11 102.5 [INFO] Installing /tmp/wire-corridor-client-1.0.13096351915533350230.pom to /root/.m2/repository/com/travelex/wire/wire-corridor-client/1.0.1/wire-corridor-client-1.0.1.pom
+#11 102.6 [INFO] ------------------------------------------------------------------------
+#11 102.6 [INFO] BUILD SUCCESS
+#11 102.6 [INFO] ------------------------------------------------------------------------
+#11 102.6 [INFO] Total time:  1.882 s
+#11 102.6 [INFO] Finished at: 2024-04-30T10:48:44Z
+#11 102.6 [INFO] ------------------------------------------------------------------------
+#11 110.4 [INFO] Scanning for projects...
+#11 111.3 [INFO] 
+#11 111.3 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 111.3 [INFO] Building Maven Stub Project (No POM) 1
+#11 111.3 [INFO] --------------------------------[ pom ]---------------------------------
+#11 111.4 [INFO] 
+#11 111.4 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 112.0 [INFO] Installing /app/lib/wire-order-client-1.0.1.jar to /root/.m2/repository/com/travelex/wire/wire-order-client/1.0.1/wire-order-client-1.0.1.jar
+#11 112.0 [INFO] Installing /tmp/wire-order-client-1.0.16456269473290821282.pom to /root/.m2/repository/com/travelex/wire/wire-order-client/1.0.1/wire-order-client-1.0.1.pom
+#11 112.0 [INFO] ------------------------------------------------------------------------
+#11 112.0 [INFO] BUILD SUCCESS
+#11 112.0 [INFO] ------------------------------------------------------------------------
+#11 112.0 [INFO] Total time:  1.769 s
+#11 112.0 [INFO] Finished at: 2024-04-30T10:48:53Z
+#11 112.0 [INFO] ------------------------------------------------------------------------
+#11 120.0 [INFO] Scanning for projects...
+#11 120.8 [INFO] 
+#11 120.8 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 120.8 [INFO] Building Maven Stub Project (No POM) 1
+#11 120.8 [INFO] --------------------------------[ pom ]---------------------------------
+#11 120.9 [INFO] 
+#11 120.9 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 121.5 [INFO] Installing /app/lib/wire-sender-client-1.0.1.jar to /root/.m2/repository/com/travelex/wire/wire-sender-client/1.0.1/wire-sender-client-1.0.1.jar
+#11 121.6 [INFO] Installing /tmp/wire-sender-client-1.0.11941119691574682572.pom to /root/.m2/repository/com/travelex/wire/wire-sender-client/1.0.1/wire-sender-client-1.0.1.pom
+#11 121.6 [INFO] ------------------------------------------------------------------------
+#11 121.6 [INFO] BUILD SUCCESS
+#11 121.6 [INFO] ------------------------------------------------------------------------
+#11 121.6 [INFO] Total time:  1.823 s
+#11 121.6 [INFO] Finished at: 2024-04-30T10:49:03Z
+#11 121.6 [INFO] ------------------------------------------------------------------------
+#11 130.1 [INFO] Scanning for projects...
+#11 130.9 [INFO] 
+#11 130.9 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 130.9 [INFO] Building Maven Stub Project (No POM) 1
+#11 130.9 [INFO] --------------------------------[ pom ]---------------------------------
+#11 131.0 [INFO] 
+#11 131.0 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 131.8 [INFO] Installing /app/lib/wire-beneficiary-client-1.0.1.jar to /root/.m2/repository/com/travelex/wire/wire-beneficiary-client/1.0.1/wire-beneficiary-client-1.0.1.jar
+#11 131.8 [INFO] Installing /tmp/wire-beneficiary-client-1.0.18896002785436204817.pom to /root/.m2/repository/com/travelex/wire/wire-beneficiary-client/1.0.1/wire-beneficiary-client-1.0.1.pom
+#11 131.9 [INFO] ------------------------------------------------------------------------
+#11 131.9 [INFO] BUILD SUCCESS
+#11 131.9 [INFO] ------------------------------------------------------------------------
+#11 131.9 [INFO] Total time:  1.960 s
+#11 131.9 [INFO] Finished at: 2024-04-30T10:49:13Z
+#11 131.9 [INFO] ------------------------------------------------------------------------
+#11 140.0 [INFO] Scanning for projects...
+#11 140.9 [INFO] 
+#11 140.9 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 141.0 [INFO] Building Maven Stub Project (No POM) 1
+#11 141.0 [INFO] --------------------------------[ pom ]---------------------------------
+#11 141.0 [INFO] 
+#11 141.0 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 141.6 [INFO] Installing /app/lib/wire-client-common-1.0.1.jar to /root/.m2/repository/com/travelex/wire/wire-client-common/1.0.1/wire-client-common-1.0.1.jar
+#11 141.7 [INFO] Installing /tmp/wire-client-common-1.0.16263569422312717612.pom to /root/.m2/repository/com/travelex/wire/wire-client-common/1.0.1/wire-client-common-1.0.1.pom
+#11 141.7 [INFO] ------------------------------------------------------------------------
+#11 141.7 [INFO] BUILD SUCCESS
+#11 141.7 [INFO] ------------------------------------------------------------------------
+#11 141.7 [INFO] Total time:  1.852 s
+#11 141.7 [INFO] Finished at: 2024-04-30T10:49:23Z
+#11 141.7 [INFO] ------------------------------------------------------------------------
+#11 150.0 [INFO] Scanning for projects...
+#11 150.9 [INFO] 
+#11 150.9 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 150.9 [INFO] Building Maven Stub Project (No POM) 1
+#11 150.9 [INFO] --------------------------------[ pom ]---------------------------------
+#11 150.9 [INFO] 
+#11 150.9 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 151.5 [INFO] pom.xml not found in wire-client.jar
+#11 151.5 [INFO] Installing /app/lib/wire-client.jar to /root/.m2/repository/com/travelex/wire/wire-client/1.0.1/wire-client-1.0.1.jar
+#11 151.6 [INFO] Installing /tmp/mvninstall5315702478685644414.pom to /root/.m2/repository/com/travelex/wire/wire-client/1.0.1/wire-client-1.0.1.pom
+#11 151.6 [INFO] ------------------------------------------------------------------------
+#11 151.6 [INFO] BUILD SUCCESS
+#11 151.6 [INFO] ------------------------------------------------------------------------
+#11 151.6 [INFO] Total time:  1.799 s
+#11 151.6 [INFO] Finished at: 2024-04-30T10:49:33Z
+#11 151.6 [INFO] ------------------------------------------------------------------------
+#11 160.0 [INFO] Scanning for projects...
+#11 160.9 [INFO] 
+#11 160.9 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 160.9 [INFO] Building Maven Stub Project (No POM) 1
+#11 160.9 [INFO] --------------------------------[ pom ]---------------------------------
+#11 160.9 [INFO] 
+#11 161.0 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 161.5 [INFO] pom.xml not found in javax.jms-1.1.jar
+#11 161.6 [INFO] Installing /app/lib/javax.jms-1.1.jar to /root/.m2/repository/javax/jms/jms/1.1/jms-1.1.jar
+#11 161.7 [INFO] Installing /tmp/mvninstall2332962386650353617.pom to /root/.m2/repository/javax/jms/jms/1.1/jms-1.1.pom
+#11 161.7 [INFO] ------------------------------------------------------------------------
+#11 161.7 [INFO] BUILD SUCCESS
+#11 161.7 [INFO] ------------------------------------------------------------------------
+#11 161.7 [INFO] Total time:  1.939 s
+#11 161.7 [INFO] Finished at: 2024-04-30T10:49:43Z
+#11 161.7 [INFO] ------------------------------------------------------------------------
+#11 169.8 [INFO] Scanning for projects...
+#11 170.6 [INFO] 
+#11 170.6 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 170.6 [INFO] Building Maven Stub Project (No POM) 1
+#11 170.6 [INFO] --------------------------------[ pom ]---------------------------------
+#11 170.7 [INFO] 
+#11 170.7 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 171.2 [INFO] pom.xml not found in nekohtml-1.9.12.jar
+#11 171.3 [INFO] Installing /app/lib/nekohtml-1.9.12.jar to /root/.m2/repository/nekohtml/nekohtml/1.9.12/nekohtml-1.9.12.jar
+#11 171.3 [INFO] Installing /tmp/mvninstall1524686022623961713.pom to /root/.m2/repository/nekohtml/nekohtml/1.9.12/nekohtml-1.9.12.pom
+#11 171.4 [INFO] ------------------------------------------------------------------------
+#11 171.4 [INFO] BUILD SUCCESS
+#11 171.4 [INFO] ------------------------------------------------------------------------
+#11 171.4 [INFO] Total time:  1.743 s
+#11 171.4 [INFO] Finished at: 2024-04-30T10:49:53Z
+#11 171.4 [INFO] ------------------------------------------------------------------------
+#11 179.1 [INFO] Scanning for projects...
+#11 179.8 [INFO] 
+#11 179.8 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 179.8 [INFO] Building Maven Stub Project (No POM) 1
+#11 179.8 [INFO] --------------------------------[ pom ]---------------------------------
+#11 179.9 [INFO] 
+#11 179.9 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 180.6 [INFO] pom.xml not found in je-3.3.62.jar
+#11 180.7 [INFO] Installing /app/lib/je-3.3.62.jar to /root/.m2/repository/com/sleepycat/je/3.3.62/je-3.3.62.jar
+#11 180.7 [INFO] Installing /tmp/mvninstall6990024247601915168.pom to /root/.m2/repository/com/sleepycat/je/3.3.62/je-3.3.62.pom
+#11 180.7 [INFO] ------------------------------------------------------------------------
+#11 180.7 [INFO] BUILD SUCCESS
+#11 180.7 [INFO] ------------------------------------------------------------------------
+#11 180.8 [INFO] Total time:  1.767 s
+#11 180.8 [INFO] Finished at: 2024-04-30T10:50:02Z
+#11 180.8 [INFO] ------------------------------------------------------------------------
+#11 188.6 [INFO] Scanning for projects...
+#11 189.5 [INFO] 
+#11 189.5 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 189.5 [INFO] Building Maven Stub Project (No POM) 1
+#11 189.5 [INFO] --------------------------------[ pom ]---------------------------------
+#11 189.5 [INFO] 
+#11 189.5 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 190.2 [INFO] pom.xml not found in xercesImpl-2.9.1.jar
+#11 190.2 [INFO] Installing /app/lib/xercesImpl-2.9.1.jar to /root/.m2/repository/xercesImpl/xercesImpl/2.9.1/xercesImpl-2.9.1.jar
+#11 190.3 [INFO] Installing /tmp/mvninstall8962417950555242242.pom to /root/.m2/repository/xercesImpl/xercesImpl/2.9.1/xercesImpl-2.9.1.pom
+#11 190.3 [INFO] ------------------------------------------------------------------------
+#11 190.3 [INFO] BUILD SUCCESS
+#11 190.3 [INFO] ------------------------------------------------------------------------
+#11 190.3 [INFO] Total time:  1.902 s
+#11 190.3 [INFO] Finished at: 2024-04-30T10:50:12Z
+#11 190.3 [INFO] ------------------------------------------------------------------------
+#11 198.3 [INFO] Scanning for projects...
+#11 199.1 [INFO] 
+#11 199.1 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 199.1 [INFO] Building Maven Stub Project (No POM) 1
+#11 199.1 [INFO] --------------------------------[ pom ]---------------------------------
+#11 199.1 [INFO] 
+#11 199.1 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 199.7 [INFO] pom.xml not found in xalan-2.7.1.jar
+#11 199.8 [INFO] Installing /app/lib/xalan-2.7.1.jar to /root/.m2/repository/xalan/xalan/2.7.1/xalan-2.7.1.jar
+#11 199.8 [INFO] Installing /tmp/mvninstall5602843722793390605.pom to /root/.m2/repository/xalan/xalan/2.7.1/xalan-2.7.1.pom
+#11 199.8 [INFO] ------------------------------------------------------------------------
+#11 199.8 [INFO] BUILD SUCCESS
+#11 199.8 [INFO] ------------------------------------------------------------------------
+#11 199.9 [INFO] Total time:  1.722 s
+#11 199.9 [INFO] Finished at: 2024-04-30T10:50:21Z
+#11 199.9 [INFO] ------------------------------------------------------------------------
+#11 207.6 [INFO] Scanning for projects...
+#11 208.5 [INFO] 
+#11 208.5 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 208.5 [INFO] Building Maven Stub Project (No POM) 1
+#11 208.5 [INFO] --------------------------------[ pom ]---------------------------------
+#11 208.5 [INFO] 
+#11 208.5 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 209.2 [INFO] pom.xml not found in serializer-2.7.1.jbossorg-1.jar
+#11 209.2 [INFO] Installing /app/lib/serializer-2.7.1.jbossorg-1.jar to /root/.m2/repository/xalan/serializer/2.7.1.jbossorg-1/serializer-2.7.1.jbossorg-1.jar
+#11 209.3 [INFO] Installing /tmp/mvninstall1326536945810901074.pom to /root/.m2/repository/xalan/serializer/2.7.1.jbossorg-1/serializer-2.7.1.jbossorg-1.pom
+#11 209.3 [INFO] ------------------------------------------------------------------------
+#11 209.3 [INFO] BUILD SUCCESS
+#11 209.3 [INFO] ------------------------------------------------------------------------
+#11 209.3 [INFO] Total time:  1.810 s
+#11 209.3 [INFO] Finished at: 2024-04-30T10:50:31Z
+#11 209.3 [INFO] ------------------------------------------------------------------------
+#11 216.7 [INFO] Scanning for projects...
+#11 217.5 [INFO] 
+#11 217.5 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 217.5 [INFO] Building Maven Stub Project (No POM) 1
+#11 217.5 [INFO] --------------------------------[ pom ]---------------------------------
+#11 217.6 [INFO] 
+#11 217.6 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 218.2 [INFO] pom.xml not found in xalan-2.7.1.jbossorg-1.jar
+#11 218.3 [INFO] Installing /app/lib/xalan-2.7.1.jbossorg-1.jar to /root/.m2/repository/xalan/xalan/2.7.1.jbossorg-1/xalan-2.7.1.jbossorg-1.jar
+#11 218.4 [INFO] Installing /tmp/mvninstall3460697514005036150.pom to /root/.m2/repository/xalan/xalan/2.7.1.jbossorg-1/xalan-2.7.1.jbossorg-1.pom
+#11 218.4 [INFO] ------------------------------------------------------------------------
+#11 218.4 [INFO] BUILD SUCCESS
+#11 218.4 [INFO] ------------------------------------------------------------------------
+#11 218.4 [INFO] Total time:  1.942 s
+#11 218.4 [INFO] Finished at: 2024-04-30T10:50:40Z
+#11 218.4 [INFO] ------------------------------------------------------------------------
+#11 225.8 [INFO] Scanning for projects...
+#11 226.5 [INFO] 
+#11 226.5 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 226.5 [INFO] Building Maven Stub Project (No POM) 1
+#11 226.5 [INFO] --------------------------------[ pom ]---------------------------------
+#11 226.5 [INFO] 
+#11 226.5 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 227.1 [INFO] pom.xml not found in serializer-2.7.1.jbossorg-1.jar
+#11 227.1 [INFO] Installing /app/lib/serializer-2.7.1.jbossorg-1.jar to /root/.m2/repository/xalan/serializer/2.7.1.jbossorg-1/serializer-2.7.1.jbossorg-1.jar
+#11 227.2 [INFO] ------------------------------------------------------------------------
+#11 227.2 [INFO] BUILD SUCCESS
+#11 227.2 [INFO] ------------------------------------------------------------------------
+#11 227.2 [INFO] Total time:  1.618 s
+#11 227.2 [INFO] Finished at: 2024-04-30T10:50:49Z
+#11 227.2 [INFO] ------------------------------------------------------------------------
+#11 235.0 [INFO] Scanning for projects...
+#11 235.8 [INFO] 
+#11 235.8 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 235.8 [INFO] Building Maven Stub Project (No POM) 1
+#11 235.8 [INFO] --------------------------------[ pom ]---------------------------------
+#11 235.9 [INFO] 
+#11 235.9 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 236.4 [INFO] pom.xml not found in xercesImpl-2.9.1-jbossas-1.jar
+#11 236.5 [INFO] Installing /app/lib/xercesImpl-2.9.1-jbossas-1.jar to /root/.m2/repository/xerces/xercesImpl/2.9.1-jbossas-1/xercesImpl-2.9.1-jbossas-1.jar
+#11 236.6 [INFO] Installing /tmp/mvninstall1449286977899644800.pom to /root/.m2/repository/xerces/xercesImpl/2.9.1-jbossas-1/xercesImpl-2.9.1-jbossas-1.pom
+#11 236.6 [INFO] ------------------------------------------------------------------------
+#11 236.6 [INFO] BUILD SUCCESS
+#11 236.6 [INFO] ------------------------------------------------------------------------
+#11 236.6 [INFO] Total time:  1.828 s
+#11 236.6 [INFO] Finished at: 2024-04-30T10:50:58Z
+#11 236.6 [INFO] ------------------------------------------------------------------------
+#11 244.3 [INFO] Scanning for projects...
+#11 245.0 [INFO] 
+#11 245.0 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 245.0 [INFO] Building Maven Stub Project (No POM) 1
+#11 245.0 [INFO] --------------------------------[ pom ]---------------------------------
+#11 245.1 [INFO] 
+#11 245.1 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 245.7 [INFO] Installing /app/lib/cxf-bundle-2.6.1.jar to /root/.m2/repository/org/apache/cxf/cxf-bundle/2.6.1/cxf-bundle-2.6.1.jar
+#11 245.8 [INFO] Installing /tmp/cxf-bundle-2.6.18431584705989222113.pom to /root/.m2/repository/org/apache/cxf/cxf-bundle/2.6.1/cxf-bundle-2.6.1.pom
+#11 245.8 [INFO] ------------------------------------------------------------------------
+#11 245.8 [INFO] BUILD SUCCESS
+#11 245.8 [INFO] ------------------------------------------------------------------------
+#11 245.8 [INFO] Total time:  1.680 s
+#11 245.8 [INFO] Finished at: 2024-04-30T10:51:07Z
+#11 245.8 [INFO] ------------------------------------------------------------------------
+#11 253.1 [INFO] Scanning for projects...
+#11 254.1 [INFO] 
+#11 254.1 [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+#11 254.1 [INFO] Building Maven Stub Project (No POM) 1
+#11 254.1 [INFO] --------------------------------[ pom ]---------------------------------
+#11 254.1 [INFO] 
+#11 254.1 [INFO] --- install:3.1.1:install-file (default-cli) @ standalone-pom ---
+#11 254.8 [INFO] Installing /app/lib/saaj-impl-1.3.16-jbossorg-1.jar to /root/.m2/repository/com/sun/xml/messaging/saaj/saaj-impl/1.3.16-jbossorg-1/saaj-impl-1.3.16-jbossorg-1.jar
+#11 254.8 [INFO] Installing /tmp/saaj-impl-1.3.16-jbossorg-17269374260777349999.pom to /root/.m2/repository/com/sun/xml/messaging/saaj/saaj-impl/1.3.16-jbossorg-1/saaj-impl-1.3.16-jbossorg-1.pom
+#11 254.9 [INFO] ------------------------------------------------------------------------
+#11 254.9 [INFO] BUILD SUCCESS
+#11 254.9 [INFO] ------------------------------------------------------------------------
+#11 254.9 [INFO] Total time:  1.949 s
+#11 254.9 [INFO] Finished at: 2024-04-30T10:51:16Z
+#11 254.9 [INFO] ------------------------------------------------------------------------
+#11 DONE 255.8s
+
+#12 [stage-1 2/4] COPY --from=builder /root/.m2 /root/.m2
+#12 DONE 1.2s
+
+#13 [stage-1 3/4] RUN rm -rf /app/lib /app/build.sh
+#13 DONE 2.0s
+
+#14 [stage-1 4/4] WORKDIR /app
+#14 DONE 0.3s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 2.0s done
+#15 writing image sha256:9445856165f5e36cd7dfb69eb82487e53b7ed27df170455363fb17b8ee936772 0.0s done
+#15 naming to docker.io/library/eclipse 0.0s done
+#15 DONE 2.1s
