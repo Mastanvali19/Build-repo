@@ -33,6 +33,9 @@ RUN rm -rf /app/lib /app/build.sh
 # Set working directory
 WORKDIR /app
 
+# Set MAVEN_CONFIG to point to the copied .m2 folder
+ENV MAVEN_CONFIG=/root/.m2
+
 # Now you can use this image in your pipeline to build other projects
 
 
