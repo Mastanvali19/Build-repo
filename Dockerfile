@@ -18,7 +18,7 @@ COPY  build.sh /app/build.sh
 RUN chmod +x /app/build.sh  /app/build.sh
 
 # # Run the build script to install dependencies
-# RUN /app/build.sh
+RUN /app/build.sh
 
 # Use a smaller base image for the final image
 FROM maven:3.9.6-amazoncorretto-8-al2023
@@ -33,8 +33,8 @@ RUN rm -rf /app/lib /app/build.sh
 # Set working directory
 WORKDIR /app
 
-# Set MAVEN_CONFIG to point to the copied .m2 folder
-ENV MAVEN_CONFIG=/root/.m2
+# # Set MAVEN_CONFIG to point to the copied .m2 folder
+# ENV MAVEN_CONFIG=/root/.m2
 
 # Now you can use this image in your pipeline to build other projects
 
