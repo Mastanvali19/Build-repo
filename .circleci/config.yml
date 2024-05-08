@@ -48,7 +48,7 @@ jobs:
         default: latest
         description: A comma-separated string containing Docker image tags to build and push (default = latest).
         type: string
-      parameters.ssm_parameter_name: 
+      ssm_parameter_name: 
         default: "build-image"
         description: The name of the SSM parameter where the image tag will be stored.".
         type: string
@@ -80,9 +80,7 @@ jobs:
       - run:
           name: Store Image Tag in SSM Parameter
           command: |
-            aws ssm put-parameter --name "${{ parameters.ssm_parameter_name }}" --value "${{ parameters.tag }}" --type "String" --overwrite
-      
-
+            aws ssm put-parameter --name "$SSM_PARAMETER_NAME" --value "$TAG" --type "String" --overwrite
 
 workflows:
   ECR_BUILD_PUSH:
