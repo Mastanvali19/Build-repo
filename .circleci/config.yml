@@ -80,7 +80,7 @@ jobs:
       - run:
           name: Store Image Tag in SSM Parameter
           command: |
-            aws ssm put-parameter --name "build-image" --value "$TAG" --type "String" --overwrite
+            aws ssm put-parameter --name "build-image" --value "latest" --type "String" --overwrite
 
 workflows:
   ECR_BUILD_PUSH:
