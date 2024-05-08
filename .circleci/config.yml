@@ -77,6 +77,10 @@ jobs:
           region: << parameters.region >>
           repo: << parameters.repo >>
           tag:  << parameters.tag >>
+      - run:
+          name: Store Image Tag in SSM Parameter
+          command: |
+            aws ssm put-parameter --name "${{ parameters.ssm_parameter_name }}" --value "${{ parameters.tag }}" --type "String" --overwrite
       
 
 
