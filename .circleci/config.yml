@@ -41,7 +41,7 @@ jobs:
         description: Name of the environment variable storing your AWS region information, defaults to AWS_DEFAULT_REGION.
         type: string
       repo:
-        default: "" 
+        default: 
         description: Name of an Amazon ECR repository.
         type: string
       tag:
