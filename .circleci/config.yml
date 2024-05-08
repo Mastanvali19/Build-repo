@@ -45,7 +45,7 @@ jobs:
         description: Name of an Amazon ECR repository.
         type: string
       tag:
-        default: latest
+        default: ${CIRCLE_SHA1}
         description: A comma-separated string containing Docker image tags to build and push (default = latest).
         type: string
       ssm_parameter_name: 
@@ -80,7 +80,7 @@ jobs:
       - run:
           name: Store Image Tag in SSM Parameter
           command: |
-            aws ssm put-parameter --name "build-image" --value "latest" --type "String" --overwrite
+            aws ssm put-parameter --name "build-image" --value "${CIRCLE_SHA1}" --type "String" --overwrite
 
 workflows:
   ECR_BUILD_PUSH:
