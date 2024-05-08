@@ -96,7 +96,7 @@ workflows:
           aws_domain: amazonaws.com
           dockerfile: Dockerfile
           repo: build-repo
-          tag: latest
+          tag: ${CIRCLE_SHA1}
           context: creds
           filters:
             branches:
