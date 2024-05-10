@@ -41,8 +41,9 @@
 # # ######################################################################################
 
 # Use a Maven image as the base image
-FROM maven:3.9.6-eclipse-temurin-8-alpine AS builder
+# FROM maven:3.9.6-eclipse-temurin-8-alpine AS builder
 
+FROM 872238057757.dkr.ecr.us-east-1.amazonaws.com/demo:maven AS builder
 
 # Set working directory
 WORKDIR /app
@@ -59,8 +60,9 @@ RUN chmod +x /app/build.sh
 RUN /app/build.sh
 
 # Use a smaller base image for the final image
-FROM maven:3.9.6-eclipse-temurin-8-alpine
+# FROM maven:3.9.6-eclipse-temurin-8-alpine
 
+FROM 872238057757.dkr.ecr.us-east-1.amazonaws.com/demo:maven 
 
 
 # Copy the .m2 folder with resolved dependencies from the builder stage

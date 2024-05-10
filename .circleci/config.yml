@@ -5,6 +5,7 @@ orbs:
   aws-ecr: circleci/aws-ecr@9.1.0
 
 jobs:
+    
   build_and_push_image:
     machine:
       image: ubuntu-2204:2023.02.1
@@ -41,7 +42,7 @@ jobs:
         description: Name of the environment variable storing your AWS region information, defaults to AWS_DEFAULT_REGION.
         type: string
       repo:
-        default: 
+        default: "" 
         description: Name of an Amazon ECR repository.
         type: string
       tag:
