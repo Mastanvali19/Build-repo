@@ -5,7 +5,6 @@ orbs:
   aws-ecr: circleci/aws-ecr@9.1.0
 
 jobs:
-    
   build_and_push_image:
     machine:
       image: ubuntu-2204:2023.02.1
@@ -46,7 +45,7 @@ jobs:
         description: Name of an Amazon ECR repository.
         type: string
       tag:
-        default: ${CIRCLE_SHA1}
+        default: dev-${CIRCLE_JOB}-${CIRCLE_SHA1}-${CIRCLE_BUILD_NUM}-${CIRCLE_BUILD_CREATED_AT}
         description: A comma-separated string containing Docker image tags to build and push (default = latest).
         type: string
       ssm_parameter_name: 
@@ -81,7 +80,7 @@ jobs:
       - run:
           name: Store Image Tag in SSM Parameter
           command: |
-            aws ssm put-parameter --name "build-image" --value "${CIRCLE_SHA1}" --type "String" --overwrite
+            aws ssm put-parameter --name "build-image" --value "latest" --type "String" --overwrite
 
 workflows:
   ECR_BUILD_PUSH:
@@ -97,9 +96,138 @@ workflows:
           aws_domain: amazonaws.com
           dockerfile: Dockerfile
           repo: build-repo
-          tag: ${CIRCLE_SHA1}
+          tag: dev-${CIRCLE_JOB}-${CIRCLE_SHA1}-${CIRCLE_BUILD_NUM}-${CIRCLE_BUILD_CREATED_AT}
           context: creds
           filters:
             branches:
               only:
                 - main
+
+
+
+# ##################################Travelex Stndard########################
+# ###########################################################################
+# ---
+# version: 2.1
+
+# parameters:
+#   BUILD_N_PUSH_ECR_IMG:
+#     type: boolean
+#     default: false
+
+# orbs:
+#   sts: tvx/aws-cli@0.0.14
+#   aws-cli: circleci/aws-cli@4.0
+#   aws-ecr: circleci/aws-ecr@9.0
+
+# attach_workspace: &attach_workspace
+#     attach_workspace:
+#       at: ~/
+
+
+# jobs:
+
+#   sts:
+#     circleci_ip_ranges: true
+#     executor: sts/default
+#     steps:
+#       - checkout
+#       - run:
+#           name: Checking the environment
+#           shell: /bin/bash
+#           command: |
+#             IAM_Role=$OIDC_ROLE_ARN
+#             # IAM_Role="$OIDC_ROLE_ARN"
+
+#             echo IAM_Role: $IAM_Role
+#             echo export IAM_Role=$IAM_Role >> "$BASH_ENV"
+
+#       - sts/setup:
+#                 role-arn: $IAM_Role
+#                 deploy-region: "eu-west-1"
+#                 role-session-name: 'circleci-oidc-role'
+#                 assume_with_oidc: true
+#                 persist_to_workspace_path: '.aws'
+#                 session-duration: '7200'
+
+#   build-webapp-then-push-with-buildx:
+#     machine:
+#       image: ubuntu-2204:2023.07.2
+#     environment:
+#       region: $AWS_DEFAULT_REGION
+#       repo: self-service-app
+#       tag: latest
+#       build_dir: docker/webapps
+#     steps:
+#       - aws-ecr/build_and_push_image:
+#           attach_workspace: true
+#           auth:
+#             - aws-cli/setup:
+#                 role_arn: $OIDC_ROLE_ARN
+#           create_repo: true
+#           dockerfile: Dockerfile
+#           path: ${build_dir}
+#           platform: linux/amd64
+#           push_image: true
+#           region: $AWS_DEFAULT_REGION
+#           repo:  ${repo}
+#           tag: ${tag}
+#           workspace_root: ${build_dir}
+#           account_id: $AWS_ACCOUNT_ID
+#           build_path: ${build_dir}
+#           repo_encryption_kms_key: arn:aws:kms:$AWS_DEFAULT_REGION:$AWS_ACCOUNT_ID:key/$UUID4_OF_KMS_KEY_ID
+#           repo_encryption_type: KMS
+
+#   build-nginx-then-push-with-buildx:
+#     machine:
+#       image: ubuntu-2204:2023.07.2
+#     environment:
+#       region: $AWS_DEFAULT_REGION
+#       repo: self-service-nginx
+#       tag: latest
+#       build_dir: docker/nginx
+#     steps:
+#       - aws-ecr/build_and_push_image:
+#           attach_workspace: true
+#           auth:
+#             - aws-cli/setup:
+#                 role_arn: $OIDC_ROLE_ARN
+#           create_repo: true
+#           dockerfile: Dockerfile
+#           path: ${build_dir}
+#           platform: linux/amd64
+#           push_image: true
+#           region: $AWS_DEFAULT_REGION
+#           repo: ${repo}
+#           tag: ${tag}
+#           workspace_root: ${build_dir}
+#           account_id: $AWS_ACCOUNT_ID
+#           build_path: ${build_dir}
+#           repo_encryption_kms_key: arn:aws:kms:$AWS_DEFAULT_REGION:$AWS_ACCOUNT_ID:key/$UUID4_OF_KMS_KEY_ID
+#           repo_encryption_type: KMS
+
+
+
+# workflows:
+#   version: 2
+#   build-aws:
+#     jobs:
+#       - sts:
+#           context: cloud-devops
+#           filters:
+#             branches:
+#               only:
+#                 - develop
+
+#   build-img:
+#     when: << pipeline.parameters.BUILD_N_PUSH_ECR_IMG >>
+#     jobs:
+#       - sts:
+#           context: cloud-devops
+#       - build-webapp-then-push-with-buildx:
+#           requires:
+#             - sts
+#           filters:
+#             branches:
+#               only:
+#                 - develop
