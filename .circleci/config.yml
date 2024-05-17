@@ -45,7 +45,7 @@ jobs:
         description: Name of an Amazon ECR repository.
         type: string
       tag:
-        default: ${CIRCLE_SHA1}
+        default: dev-${CIRCLE_SHA1}
         description: A comma-separated string containing Docker image tags to build and push (default = latest).
         type: string
       ssm_parameter_name: 
@@ -59,29 +59,45 @@ jobs:
         type: string
     steps:   
       - steps: <<parameters.auth>>
-      - aws-ecr/ecr_login:
-          region: ${AWS_DEFAULT_REGION}
-      - aws-ecr/build_and_push_image:
-          account_id: << parameters.account_id >>
-          container_registry_login: <<parameters.container_registry_login>>
-          attach_workspace: << parameters.attach_workspace >>
-          auth: << parameters.auth >>
-          aws_domain: << parameters.aws_domain >>
-          dockerfile: << parameters.dockerfile >>
-          push_image: << parameters.push_image >>
-          repo: << parameters.repo >>
-          tag: << parameters.tag >>
-          workspace_root: << parameters.workspace_root >>
+      # - aws-ecr/ecr_login:
+      #     region: ${AWS_DEFAULT_REGION}
+      # - aws-ecr/build_and_push_image:
+      #     account_id: << parameters.account_id >>
+      #     container_registry_login: <<parameters.container_registry_login>>
+      #     attach_workspace: << parameters.attach_workspace >>
+      #     auth: << parameters.auth >>
+      #     aws_domain: << parameters.aws_domain >>
+      #     dockerfile: << parameters.dockerfile >>
+      #     push_image: << parameters.push_image >>
+      #     repo: << parameters.repo >>
+      #     tag: << parameters.tag >>
+      #     workspace_root: << parameters.workspace_root >>
            
-      - aws-ecr/push_image:
-          region: << parameters.region >>
-          repo: << parameters.repo >>
-          tag:  << parameters.tag >>
+      # - aws-ecr/push_image:
+      #     region: << parameters.region >>
+      #     repo: << parameters.repo >>
+      #     tag:  << parameters.tag >>
+      # - run:
+      #     name: Store Image Tag in SSM Parameter
+      #     command: |
+      #       aws ssm put-parameter --name "build-image" --value "${CIRCLE_SHA1}" --type "String" --overwrite
+build-package-dependencies:
+    docker:
+      - image: maven:3.9.6-eclipse-temurin-8-alpine
+    steps:
+      - checkout
       - run:
-          name: Store Image Tag in SSM Parameter
+          name: Build and package dependencies
           command: |
-            aws ssm put-parameter --name "build-image" --value "${CIRCLE_SHA1}" --type "String" --overwrite
-
+            # Clone the repository containing dependencies
+            git clone https://github.com/Mastangithub123/dependecies.git
+            cd dependencies
+            
+            # Build the dependencies and package them
+            mvn clean install -U -Dmaven.test.skip=true
+            
+            # Copy the JAR files to the current repository
+            cp target/*.jar  target
 workflows:
   ECR_BUILD_PUSH:
     jobs:
@@ -102,6 +118,8 @@ workflows:
             branches:
               only:
                 - main
+
+
 
 
 
